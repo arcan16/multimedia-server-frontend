@@ -1,0 +1,54 @@
+:root {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --color-bg: #0e1014;
+  --color-bg-deep: #07080a;
+  --color-surface: #161920;
+  --color-surface-2: #1e222b;
+  --color-border: #2b303b;
+  --color-border-strong: #4a505d;
+
+  /* Text */
+  --color-text: #eceef2;
+  --color-text-soft: #c9ced8;
+  --color-text-muted: #a3abb9;
+  --color-text-disabled: #5a606c;
+
+  /* Accent */
+  --color-accent: #f2a93b;
+  --color-accent-hover: #ffc56b;
+  --color-on-accent: #1b1306;
+  --color-accent-tint: #2a2418;
+  --color-accent-disabled: #4a3f2a;
+  --color-on-accent-disabled: #c9b48c;
+
+  /* Status */
+  --color-danger: #e5675c;
+  --color-danger-text: #ffb4ab;
+  --color-danger-bg: #2a1714;
+  --color-danger-border: #5c2a24;
+  --color-on-danger: #1a0705;
+  --color-success-text: #a6e3b2;
+  --color-success-bg: #142318;
+  --color-success-border: #2d5a37;
+  --color-info-text: #b9d3f5;
+  --color-info-bg: #15202e;
+  --color-info-border: #2a4260;
+
+  --color-overlay: rgba(7, 8, 10, 0.72);
+
+  /* Type */
+  --font-heading: 'Sora', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-control: 10px;
+  --radius-card: 14px;
+  --radius-dialog: 16px;
+  --radius-pill: 999px;
+
+  --touch: 44px;
+  --sidebar-width: 240px;
+}

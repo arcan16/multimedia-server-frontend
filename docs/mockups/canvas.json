@@ -1,0 +1,38 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-20T12:00:00Z"},
+  "title": "MultimediaServer — Mockups frontend",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1440, "h": 900, "title": "Login", "expand": "fill", "is_interactive": true},
+    "Catalog.dc.html": {"x": 1520, "y": 0, "w": 1440, "h": 1150, "title": "Catálogo", "expand": "fill", "is_interactive": true},
+    "Detail.dc.html": {"x": 3040, "y": 0, "w": 1440, "h": 1250, "title": "Detalle de serie", "expand": "fill", "is_interactive": true},
+    "Player.dc.html": {"x": 4560, "y": 0, "w": 1440, "h": 900, "title": "Reproductor", "expand": "fill", "is_interactive": true},
+    "Profile.dc.html": {"x": 6080, "y": 0, "w": 1440, "h": 1050, "title": "Mi cuenta (USER)", "expand": "fill", "is_interactive": true},
+    "AdminCatalog.dc.html": {"x": 0, "y": 1700, "w": 1440, "h": 1050, "title": "Admin · Contenido", "expand": "fill", "is_interactive": true},
+    "MovieForm.dc.html": {"x": 1520, "y": 1700, "w": 1440, "h": 1150, "title": "Admin · Película/serie", "expand": "fill", "is_interactive": true},
+    "MultimediaAdmin.dc.html": {"x": 3040, "y": 1700, "w": 1440, "h": 1150, "title": "Admin · Episodios y vídeo", "expand": "fill", "is_interactive": true},
+    "Users.dc.html": {"x": 4560, "y": 1700, "w": 1440, "h": 1050, "title": "Admin · Usuarios", "expand": "fill", "is_interactive": true},
+    "Genres.dc.html": {"x": 6080, "y": 1700, "w": 1440, "h": 900, "title": "Admin · Géneros", "expand": "fill", "is_interactive": true}
+  },
+  "order": [
+    "Main.dc.html",
+    "Catalog.dc.html",
+    "Detail.dc.html",
+    "Player.dc.html",
+    "Profile.dc.html",
+    "AdminCatalog.dc.html",
+    "MovieForm.dc.html",
+    "MultimediaAdmin.dc.html",
+    "Users.dc.html",
+    "Genres.dc.html"
+  ],
+  "notes": {
+    "rowCommon": {"x": 0, "y": -300, "text": "Experiencia común — USER y ADMIN", "kind": "title1", "maxW": 7520},
+    "rowAdmin": {"x": 0, "y": 1400, "text": "Administración — solo ADMIN", "kind": "title1", "maxW": 7520},
+    "noteUser": {"x": -760, "y": 0, "w": 640, "size": "m", "fill": "blue", "text": "Rol USER\n\n• Ve el catálogo, el detalle y reproduce vídeos.\n• Solo edita sus datos personales, usuario y contraseña en «Mi cuenta».\n• No ve la sección Administración ni los botones de editar o borrar.\n\nUsa el ajuste «role» de Catálogo y Detalle para comparar ADMIN y USER."},
+    "noteAdmin": {"x": -760, "y": 1700, "w": 640, "size": "m", "fill": "orange", "text": "Rol ADMIN\n\n• Todo lo de USER, más la sección Administración del menú.\n• CRUD de películas y series (póster), episodios (subida de vídeo con duración vía ffprobe), géneros y usuarios.\n• Reglas del backend reflejadas en la UI: no puede editar ni borrar a otro admin, siempre queda al menos un admin, un género en uso no se borra."}
+  },
+  "designSystems": []
+}

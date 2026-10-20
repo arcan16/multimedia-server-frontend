@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Detalle de serie</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0E1014}
+a{color:#F2A93B}a:hover{color:#FFC56B}
+.nav{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 12px;border-radius:10px;color:#C9CED8;text-decoration:none;font-size:15px}
+.nav:hover{background:#1E222B;color:#ECEEF2}
+.nav-on{background:#2A2418;color:#F2A93B}
+.ep:hover{background:#1E222B}
+input:focus,button:focus-visible,a:focus-visible{outline:2px solid #F2A93B;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #0E1014; color: #ECEEF2; font-family: Inter, system-ui, sans-serif">
+  <nav aria-label="Principal" style="flex: 1 1 220px; max-width: 100%; box-sizing: border-box; padding: 24px 16px; background: #161920; border-right: 1px solid #2B303B; display: flex; flex-direction: column; gap: 6px">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 12px 20px">
+      <div style="width: 32px; height: 32px; border-radius: 8px; background: #F2A93B; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1306" stroke-width="2.5" stroke-linejoin="round"><polygon points="7 4 20 12 7 20 7 4"></polygon></svg></div>
+      <span style="font-family: Sora, sans-serif; font-weight: 700; font-size: 16px">MultimediaServer</span>
+    </div>
+    <a href="Catalog.dc.html" class="nav nav-on" aria-current="page"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>Catálogo</a>
+    <a href="Profile.dc.html" class="nav"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Mi cuenta</a>
+    <sc-if value="{{isAdmin}}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 18px">
+        <span style="padding: 0 12px 4px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A3ABB9">Administración</span>
+        <a href="AdminCatalog.dc.html" class="nav"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M7 4v16M17 4v16M2 12h20"></path></svg>Contenido</a>
+        <a href="MultimediaAdmin.dc.html" class="nav"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6 10l6-6 6 6"></path><path d="M4 20h16"></path></svg>Episodios y vídeo</a>
+        <a href="Genres.dc.html" class="nav"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12l-8 8-9-9V3h8z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg>Géneros</a>
+        <a href="Users.dc.html" class="nav"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"></circle><path d="M2 21c0-4 3-6 7-6s7 2 7 6"></path><path d="M16 4a4 4 0 0 1 0 8M22 21c0-3-2-5-4-6"></path></svg>Usuarios</a>
+      </div>
+    </sc-if>
+    <div style="flex: 1"></div>
+    <div style="display: flex; align-items: center; gap: 10px; padding: 12px; border-top: 1px solid #2B303B; margin-top: 16px">
+      <div style="width: 36px; height: 36px; border-radius: 50%; background: #1E222B; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px">{{initial}}</div>
+      <div style="display: flex; flex-direction: column; min-width: 0; flex: 1">
+        <span style="font-size: 14px; font-weight: 600">{{username}}</span>
+        <span style="font-size: 12px; color: #A3ABB9">{{role}}</span>
+      </div>
+      <a href="Main.dc.html" aria-label="Cerrar sesión" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: #A3ABB9"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><path d="M16 17l5-5-5-5M21 12H9"></path></svg></a>
+    </div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 40px 56px; display: flex; flex-direction: column; gap: 32px">
+    <a href="Catalog.dc.html" style="align-self: flex-start; display: flex; align-items: center; gap: 6px; min-height: 44px; color: #C9CED8; text-decoration: none; font-size: 15px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"></path></svg>Volver al catálogo</a>
+    <section style="display: flex; flex-wrap: wrap; gap: 36px; align-items: flex-start">
+      <div style="flex: 0 1 260px; aspect-ratio: 2 / 3; border-radius: 14px; background: #3A2F4F; border: 1px solid rgba(255,255,255,0.06); padding: 18px; box-sizing: border-box; display: flex; align-items: flex-end">
+        <span style="font-family: Sora, sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2">La ruta del norte</span>
+      </div>
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 14px; color: #A3ABB9">
+          <span style="padding: 4px 10px; border-radius: 6px; background: #1E222B; color: #ECEEF2; font-weight: 600; font-size: 12px; letter-spacing: 0.04em">SERIE</span>
+          <span>2024</span><span aria-hidden="true">·</span><span>+13</span><span aria-hidden="true">·</span><span>3 temporadas</span>
+        </div>
+        <h1 style="margin: 0; font-family: Sora, sans-serif; font-size: 44px; line-height: 1.1">La ruta del norte</h1>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px">
+          <span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #2B303B; font-size: 13px; color: #C9CED8">Drama</span>
+          <span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #2B303B; font-size: 13px; color: #C9CED8">Aventura</span>
+        </div>
+        <p style="margin: 0; max-width: 720px; color: #C9CED8; font-size: 16px; line-height: 1.65">[Sinopsis de la serie: texto largo que viene del campo synopsis del backend. Se muestra completo en el detalle y recortado en las tarjetas.]</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 6px">
+          <a href="Player.dc.html" style="height: 48px; padding: 0 22px; border-radius: 10px; background: #F2A93B; color: #1B1306; font-weight: 600; font-size: 16px; display: flex; align-items: center; gap: 10px; text-decoration: none"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="7 4 20 12 7 20 7 4"></polygon></svg>Reproducir T1 · E1</a>
+          <sc-if value="{{isAdmin}}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-wrap: wrap; gap: 12px">
+              <a href="MovieForm.dc.html" style="height: 48px; padding: 0 18px; border-radius: 10px; border: 1px solid #2B303B; background: #161920; color: #ECEEF2; font-weight: 500; font-size: 15px; display: flex; align-items: center; gap: 8px; text-decoration: none"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"></path></svg>Editar</a>
+              <a href="MultimediaAdmin.dc.html" style="height: 48px; padding: 0 18px; border-radius: 10px; border: 1px solid #2B303B; background: #161920; color: #ECEEF2; font-weight: 500; font-size: 15px; display: flex; align-items: center; gap: 8px; text-decoration: none"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6 10l6-6 6 6"></path><path d="M4 20h16"></path></svg>Añadir episodio</a>
+              <button type="button" style="height: 48px; padding: 0 18px; border-radius: 10px; border: 1px solid #5C2A24; background: transparent; color: #FFB4AB; font-weight: 500; font-size: 15px; font-family: inherit; display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"></path></svg>Eliminar</button>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </section>
+    <section aria-labelledby="eps-title" style="display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+        <h2 id="eps-title" style="margin: 0; font-family: Sora, sans-serif; font-size: 24px">Episodios</h2>
+        <div role="tablist" aria-label="Temporadas" style="display: flex; gap: 6px; padding: 4px; background: #161920; border: 1px solid #2B303B; border-radius: 10px">
+          <button type="button" role="tab" aria-selected="true" style="height: 36px; padding: 0 14px; border-radius: 7px; border: 0; background: #2A2418; color: #F2A93B; font-weight: 600; font-size: 14px; font-family: inherit">Temporada 1</button>
+          <button type="button" role="tab" aria-selected="false" style="height: 36px; padding: 0 14px; border-radius: 7px; border: 0; background: transparent; color: #C9CED8; font-size: 14px; font-family: inherit">Temporada 2</button>
+          <button type="button" role="tab" aria-selected="false" style="height: 36px; padding: 0 14px; border-radius: 7px; border: 0; background: transparent; color: #C9CED8; font-size: 14px; font-family: inherit">Temporada 3</button>
+        </div>
+      </div>
+      <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border: 1px solid #2B303B; border-radius: 14px; overflow: hidden">
+        <sc-for list="{{episodes}}" as="ep" hint-placeholder-count="5">
+          <li class="ep" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding: 14px 18px; border-bottom: 1px solid #2B303B">
+            <a href="Player.dc.html" aria-label="{{ep.playLabel}}" style="width: 44px; height: 44px; flex: none; border-radius: 50%; background: #1E222B; color: #F2A93B; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="7 4 20 12 7 20 7 4"></polygon></svg></a>
+            <span style="width: 44px; font-family: Sora, sans-serif; font-weight: 600; color: #A3ABB9">{{ep.code}}</span>
+            <span style="flex: 1 1 200px; font-size: 15px; font-weight: 500">{{ep.title}}</span>
+            <span style="font-size: 14px; color: #A3ABB9">{{ep.duration}}</span>
+            <sc-if value="{{isAdmin}}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; gap: 4px">
+                <a href="MultimediaAdmin.dc.html" aria-label="Editar episodio" style="width: 44px; height: 44px; border-radius: 10px; color: #C9CED8; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"></path></svg></a>
+                <button type="button" aria-label="Eliminar episodio" style="width: 44px; height: 44px; border-radius: 10px; border: 0; background: transparent; color: #FFB4AB; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"></path></svg></button>
+              </div>
+            </sc-if>
+          </li>
+        </sc-for>
+      </ol>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"role":{"editor":"enum","options":["USER","ADMIN"],"default":"USER"},"$preview":{"width":1440,"height":1250}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const role = this.props.role ?? 'USER';
+    const isAdmin = role === 'ADMIN';
+    const eps = [
+      ['Piloto', '52 min'],
+      ['El paso helado', '48 min'],
+      ['Refugio', '50 min'],
+      ['La carta', '47 min'],
+      ['Tormenta', '55 min'],
+      ['Final de etapa', '58 min']
+    ];
+    const episodes = eps.map((e, i) => ({
+      code: 'E' + (i + 1),
+      title: e[0],
+      duration: e[1],
+      playLabel: 'Reproducir episodio ' + (i + 1) + ': ' + e[0]
+    }));
+    return { role, isAdmin, episodes, username: isAdmin ? 'admin' : 'ana', initial: isAdmin ? 'A' : 'AN' };
+  }
+}
+</script>
+</body>
+</html>

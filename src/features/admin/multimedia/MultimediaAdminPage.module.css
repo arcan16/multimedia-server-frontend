@@ -1,0 +1,36 @@
+.header {
+  align-items: flex-end;
+}
+
+.picker {
+  flex: 0 1 320px;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.list {
+  flex: 999 1 520px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.season {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.seasonTitle {
+  font-size: 19px;
+}
+
+.selected td {
+  background: var(--color-accent-tint);
+}

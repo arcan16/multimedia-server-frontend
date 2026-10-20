@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Iniciar sesión</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0E1014}
+a{color:#F2A93B}a:hover{color:#FFC56B}
+input:focus{outline:2px solid #F2A93B;outline-offset:1px}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #0E1014; color: #ECEEF2; font-family: Inter, system-ui, sans-serif">
+  <section style="flex: 1 1 420px; display: flex; flex-direction: column; justify-content: space-between; gap: 48px; padding: 56px; background: #161920; border-right: 1px solid #2B303B">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <div style="width: 40px; height: 40px; border-radius: 10px; background: #F2A93B; display: flex; align-items: center; justify-content: center">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B1306" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7 4 20 12 7 20 7 4"></polygon></svg>
+      </div>
+      <span style="font-family: Sora, sans-serif; font-weight: 700; font-size: 20px">MultimediaServer</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px; max-width: 460px">
+      <h1 style="margin: 0; font-family: Sora, sans-serif; font-size: 44px; line-height: 1.1">Tu videoteca, en tu propio servidor.</h1>
+      <p style="margin: 0; color: #A3ABB9; font-size: 17px; line-height: 1.6">Películas y series alojadas en casa, listas para reproducir desde el navegador.</p>
+    </div>
+    <p style="margin: 0; color: #A3ABB9; font-size: 13px">Las cuentas las crea un administrador del servidor.</p>
+  </section>
+  <section style="flex: 1 1 420px; display: flex; align-items: center; justify-content: center; padding: 56px 24px">
+    <form style="width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 20px">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <h2 style="margin: 0; font-family: Sora, sans-serif; font-size: 28px">Iniciar sesión</h2>
+        <p style="margin: 0; color: #A3ABB9; font-size: 15px">Entra con tu usuario y contraseña.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <label for="login-user" style="font-size: 14px; font-weight: 500">Usuario</label>
+        <input id="login-user" type="text" autocomplete="username" placeholder="tu_usuario" style="height: 48px; box-sizing: border-box; padding: 0 14px; border-radius: 10px; border: 1px solid #2B303B; background: #161920; color: #ECEEF2; font-size: 15px; font-family: inherit">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <label for="login-pass" style="font-size: 14px; font-weight: 500">Contraseña</label>
+        <input id="login-pass" type="password" autocomplete="current-password" placeholder="••••••••" style="height: 48px; box-sizing: border-box; padding: 0 14px; border-radius: 10px; border: 1px solid #2B303B; background: #161920; color: #ECEEF2; font-size: 15px; font-family: inherit">
+      </div>
+      <div role="alert" style="display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; border-radius: 10px; background: #2A1714; border: 1px solid #5C2A24; color: #FFB4AB; font-size: 14px">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <span>Usuario o contraseña incorrectos (401). Estado de error de ejemplo.</span>
+      </div>
+      <a href="Catalog.dc.html" style="height: 48px; border-radius: 10px; background: #F2A93B; color: #1B1306; font-weight: 600; font-size: 16px; display: flex; align-items: center; justify-content: center; text-decoration: none">Entrar</a>
+    </form>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

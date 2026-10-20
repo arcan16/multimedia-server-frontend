@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.locked {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-control);
+  background: var(--color-bg);
+  border: 1px dashed var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.locked svg {
+  flex: none;
+}
+
+.lockedText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lockedTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}

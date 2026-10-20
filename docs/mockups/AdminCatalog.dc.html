@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Administración · Contenido</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0E1014}
+a{color:#F2A93B}a:hover{color:#FFC56B}
+.nav{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 12px;border-radius:10px;color:#C9CED8;text-decoration:none;font-size:15px}
+.nav:hover{background:#1E222B;color:#ECEEF2}
+.nav-on{background:#2A2418;color:#F2A93B}
+.ib{width:40px;height:40px;border-radius:9px;border:0;background:transparent;color:#C9CED8;display:inline-flex;align-items:center;justify-content:center}
+.ib:hover{background:#1E222B;color:#ECEEF2}
+th{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#A3ABB9;text-align:left;padding:12px 16px;border-bottom:1px solid #2B303B;white-space:nowrap}
+td{padding:12px 16px;border-bottom:1px solid #2B303B;font-size:14px;vertical-align:middle}
+input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid #F2A93B;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #0E1014; color: #ECEEF2; font-family: Inter, system-ui, sans-serif">
+  <nav aria-label="Principal" style="flex: 1 1 220px; max-width: 100%; box-sizing: border-box; padding: 24px 16px; background: #161920; border-right: 1px solid #2B303B; display: flex; flex-direction: column; gap: 6px">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 0 12px 20px">
+      <div style="width: 32px; height: 32px; border-radius: 8px; background: #F2A93B; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B1306" stroke-width="2.5" stroke-linejoin="round"><polygon points="7 4 20 12 7 20 7 4"></polygon></svg></div>
+      <span style="font-family: Sora, sans-serif; font-weight: 700; font-size: 16px">MultimediaServer</span>
+    </div>
+    <a href="Catalog.dc.html" class="nav"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>Catálogo</a>
+    <a href="Profile.dc.html" class="nav"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path></svg>Mi cuenta</a>
+    <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 18px">
+      <span style="padding: 0 12px 4px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #A3ABB9">Administración</span>
+      <a href="AdminCatalog.dc.html" class="nav nav-on" aria-current="page"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M7 4v16M17 4v16M2 12h20"></path></svg>Contenido</a>
+      <a href="MultimediaAdmin.dc.html" class="nav"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6 10l6-6 6 6"></path><path d="M4 20h16"></path></svg>Episodios y vídeo</a>
+      <a href="Genres.dc.html" class="nav"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12l-8 8-9-9V3h8z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg>Géneros</a>
+      <a href="Users.dc.html" class="nav"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"></circle><path d="M2 21c0-4 3-6 7-6s7 2 7 6"></path><path d="M16 4a4 4 0 0 1 0 8M22 21c0-3-2-5-4-6"></path></svg>Usuarios</a>
+    </div>
+    <div style="flex: 1"></div>
+    <div style="display: flex; align-items: center; gap: 10px; padding: 12px; border-top: 1px solid #2B303B; margin-top: 16px">
+      <div style="width: 36px; height: 36px; border-radius: 50%; background: #1E222B; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px">A</div>
+      <div style="display: flex; flex-direction: column; min-width: 0; flex: 1">
+        <span style="font-size: 14px; font-weight: 600">admin</span>
+        <span style="font-size: 12px; color: #A3ABB9">ADMIN</span>
+      </div>
+      <a href="Main.dc.html" aria-label="Cerrar sesión" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: #A3ABB9"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><path d="M16 17l5-5-5-5M21 12H9"></path></svg></a>
+    </div>
+  </nav>
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 32px 40px 56px; display: flex; flex-direction: column; gap: 24px; position: relative">
+    <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <h1 style="margin: 0; font-family: Sora, sans-serif; font-size: 32px">Contenido</h1>
+        <p style="margin: 0; color: #A3ABB9; font-size: 15px">Gestiona las películas y series del catálogo.</p>
+      </div>
+      <a href="MovieForm.dc.html" style="height: 44px; padding: 0 18px; border-radius: 10px; background: #F2A93B; color: #1B1306; font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; text-decoration: none"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>Nueva película o serie</a>
+    </header>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px">
+      <div style="flex: 1 1 280px; max-width: 420px; display: flex; flex-direction: column; gap: 6px">
+        <label for="a-search" style="font-size: 13px; color: #A3ABB9">Buscar</label>
+        <input id="a-search" type="search" placeholder="Nombre…" style="height: 44px; box-sizing: border-box; padding: 0 14px; border-radius: 10px; border: 1px solid #2B303B; background: #161920; color: #ECEEF2; font-size: 15px; font-family: inherit">
+      </div>
+      <div style="flex: 0 1 200px; display: flex; flex-direction: column; gap: 6px">
+        <label for="a-type" style="font-size: 13px; color: #A3ABB9">Tipo</label>
+        <select id="a-type" style="height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid #2B303B; background: #161920; color: #ECEEF2; font-size: 15px; font-family: inherit"><option>Todos</option><option>Películas</option><option>Series</option></select>
+      </div>
+    </div>
+    <div style="overflow-x: auto; border: 1px solid #2B303B; border-radius: 14px; background: #161920">
+      <table style="width: 100%; border-collapse: collapse; min-width: 760px">
+        <thead>
+          <tr><th scope="col">Título</th><th scope="col">Tipo</th><th scope="col">Año</th><th scope="col">Géneros</th><th scope="col">Archivos</th><th scope="col" style="text-align: right">Acciones</th></tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{rows}}" as="r" hint-placeholder-count="8">
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; gap: 12px">
+                  <div style="{{r.thumb}}"></div>
+                  <span style="font-weight: 600">{{r.name}}</span>
+                </div>
+              </td>
+              <td><span style="padding: 3px 8px; border-radius: 6px; background: #1E222B; font-size: 12px; font-weight: 600; letter-spacing: 0.04em">{{r.type}}</span></td>
+              <td style="color: #C9CED8">{{r.year}}</td>
+              <td style="color: #C9CED8">{{r.genres}}</td>
+              <td style="color: #C9CED8">{{r.files}}</td>
+              <td>
+                <div style="display: flex; justify-content: flex-end; gap: 2px">
+                  <a href="MovieForm.dc.html" class="ib" aria-label="{{r.editLabel}}"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"></path></svg></a>
+                  <a href="MultimediaAdmin.dc.html" class="ib" aria-label="{{r.filesLabel}}"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polygon points="10 9 15 12 10 15 10 9"></polygon></svg></a>
+                  <button type="button" class="ib" aria-label="{{r.deleteLabel}}" style="color: #FFB4AB"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"></path></svg></button>
+                </div>
+              </td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </div>
+    <sc-if value="{{showDialog}}" hint-placeholder-val="{{ true }}">
+      <div style="position: absolute; inset: 0; background: rgba(7,8,10,0.7); display: flex; align-items: center; justify-content: center; padding: 24px">
+        <div role="dialog" aria-modal="true" aria-labelledby="del-title" style="width: 100%; max-width: 460px; box-sizing: border-box; padding: 28px; border-radius: 16px; background: #161920; border: 1px solid #2B303B; display: flex; flex-direction: column; gap: 16px">
+          <h2 id="del-title" style="margin: 0; font-family: Sora, sans-serif; font-size: 22px">¿Eliminar «Los últimos faros»?</h2>
+          <p style="margin: 0; color: #C9CED8; font-size: 15px; line-height: 1.6">También se eliminarán sus <strong>14 episodios</strong>. Los archivos se conservan en el servidor y la acción queda registrada en la auditoría.</p>
+          <div style="display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap">
+            <button type="button" style="height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #2B303B; background: transparent; color: #ECEEF2; font-size: 15px; font-family: inherit">Cancelar</button>
+            <button type="button" style="height: 44px; padding: 0 18px; border-radius: 10px; border: 0; background: #E5675C; color: #1A0705; font-weight: 600; font-size: 15px; font-family: inherit">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showDialog":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":1050}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const tones = ['#3A2F4F', '#24414A', '#4A3326', '#2E3F2C', '#41283A', '#2B3550', '#4A4026', '#253B3B'];
+    const thumb = 'width: 36px; height: 54px; flex: none; border-radius: 6px; background: ';
+    const data = [
+      ['La ruta del norte', 'SERIE', '2024', 'Drama, Aventura', '18 episodios'],
+      ['Marea baja', 'PELÍCULA', '2021', 'Thriller', '1 vídeo'],
+      ['Los últimos faros', 'SERIE', '2023', 'Misterio', '14 episodios'],
+      ['Ciudad de papel', 'PELÍCULA', '2019', 'Comedia', '1 vídeo'],
+      ['Órbita', 'PELÍCULA', '2022', 'Ciencia ficción', 'Sin vídeo'],
+      ['Casa Valdés', 'SERIE', '2020', 'Drama', '32 episodios'],
+      ['El silencio del bosque', 'PELÍCULA', '2018', 'Terror', '1 vídeo'],
+      ['Señales', 'SERIE', '2025', 'Ciencia ficción', '6 episodios']
+    ];
+    const rows = data.map((d, i) => ({
+      name: d[0], type: d[1], year: d[2], genres: d[3], files: d[4],
+      thumb: thumb + tones[i % tones.length],
+      editLabel: 'Editar ' + d[0],
+      filesLabel: 'Archivos de ' + d[0],
+      deleteLabel: 'Eliminar ' + d[0]
+    }));
+    return { rows, showDialog: this.props.showDialog ?? true };
+  }
+}
+</script>
+</body>
+</html>

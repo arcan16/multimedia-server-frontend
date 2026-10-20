@@ -1,0 +1,6 @@
+export { ApiError } from './client'
+export { authApi } from './auth.api'
+export { usersApi } from './users.api'
+export { genresApi } from './genres.api'
+export { moviesSeriesApi } from './moviesSeries.api'
+export { multimediaApi } from './multimedia.api'

@@ -1,0 +1,34 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filters :global(.field__label) {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.filters :global(.input) {
+  height: var(--touch);
+}
+
+.searchField {
+  flex: 1 1 280px;
+  max-width: 420px;
+}
+
+.typeField {
+  flex: 0 1 200px;
+}
+
+.titleCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.titleName {
+  font-weight: 600;
+}

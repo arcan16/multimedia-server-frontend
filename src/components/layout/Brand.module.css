@@ -1,0 +1,53 @@
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.md .mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.md .mark svg {
+  width: 16px;
+  height: 16px;
+}
+
+.md .name {
+  font-size: 16px;
+}
+
+.lg {
+  gap: 12px;
+}
+
+.lg .mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.lg .mark svg {
+  width: 22px;
+  height: 22px;
+}
+
+.lg .name {
+  font-size: 20px;
+}

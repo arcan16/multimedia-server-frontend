@@ -1,0 +1,24 @@
+.userCell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.email {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.locked {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 8px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
